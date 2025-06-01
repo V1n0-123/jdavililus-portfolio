@@ -1,0 +1,359 @@
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@300;400;700&display=swap');
+
+/* Variables de color para tu paleta */
+:root {
+    --dark-background: #1a0a1f; /* Casi negro, con un toque púrpura oscuro */
+    --accent-red: #8b0000;      /* Rojo oscuro intenso */
+    --accent-orange: #ff4500;   /* Naranja brillante */
+    --accent-green: #006400;    /* Verde oscuro */
+    --text-light: #f5f5f5;      /* Texto claro para contraste */
+    --text-muted: #aaaaaa;      /* Texto más tenue */
+    --link-color: #6a0dad;      /* Púrpura oscuro para enlaces */
+    --link-hover: #9932cc;      /* Púrpura más claro al pasar el ratón */
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: var(--dark-background);
+    color: var(--text-light);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+header {
+    background: #0d0410; /* Un poco más oscuro que el fondo */
+    color: var(--text-light);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--accent-red);
+}
+
+header h1 {
+    font-family: 'Creepster', cursive;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 3em;
+    color: var(--accent-orange);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+header nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--accent-red);
+}
+
+main {
+    flex: 1; /* Permite que el contenido principal ocupe el espacio disponible */
+    padding: 20px 0;
+}
+
+section {
+    padding: 40px 0;
+    margin-bottom: 30px;
+    background-color: rgba(20, 10, 25, 0.7); /* Un poco más claro, con transparencia */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+section h2, section h3 {
+    font-family: 'Creepster', cursive;
+    text-align: center;
+    color: var(--accent-orange);
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(26,10,31,0.8), rgba(26,10,31,0.8)), url('../images/alien.jpg') no-repeat center center/cover;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+#hero h2 {
+    font-size: 3.5em;
+    color: var(--accent-red);
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 7px rgba(0,0,0,0.7);
+}
+
+#hero p {
+    font-size: 1.3em;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Gallery Section */
+#gallery h3 {
+    margin-top: 0;
+}
+
+.illustrations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    background-color: rgba(20, 10, 25, 0.8);
+    border-radius: 8px;
+}
+
+.illustration-item {
+    background-color: #0d0410;
+    border: 1px solid var(--accent-green);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.illustration-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+    border-color: var(--accent-orange);
+}
+
+.illustration-item img {
+    width: 100%;
+    height: 300px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.illustration-item img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Bio Page Specifics */
+#bio-content p {
+    text-align: left;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+#bio-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Blog Page Specifics */
+.blog-post {
+    background-color: #0d0410;
+    border: 1px solid var(--accent-green);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    border-color: var(--accent-orange);
+}
+
+.blog-post h3 {
+    font-family: 'Montserrat', sans-serif; /* Usar Montserrat para títulos de blog */
+    color: var(--accent-orange);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-align: left;
+    text-shadow: none; /* Quitar sombra para mejor lectura */
+}
+
+.blog-post .post-meta {
+    font-size: 0.9em;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.blog-post p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.blog-post .read-more {
+    display: inline-block;
+    background-color: var(--link-color);
+    color: var(--text-light);
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.blog-post .read-more:hover {
+    background-color: var(--link-hover);
+}
+
+
+/* Contact Form Specifics */
+#contact-form form {
+    background-color: #0d0410;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid var(--accent-green);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #2b1134; /* Un tono más oscuro */
+    border: 1px solid var(--accent-red);
+    border-radius: 5px;
+    color: var(--text-light);
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-orange);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+#contact-form button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--link-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#contact-form button:hover {
+    background-color: var(--link-hover);
+    transform: translateY(-2px);
+}
+
+/* Netlify honeypot field */
+.hidden {
+    display: none;
+}
+
+
+footer {
+    background: #0d0410;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 30px;
+    border-top: 2px solid var(--accent-green);
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .illustrations-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+    section h2 {
+        font-size: 1.8em;
+    }
+    #hero h2 {
+        font-size: 2.5em;
+    }
+    #hero p {
+        font-size: 1em;
+    }
+}
